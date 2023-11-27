@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct AyudaContrasen_a: View {
+    
+    @State private var email: String = ""
+    @State private var iniciar: Bool = false
+    @State private var atras: Bool = false
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Group{
+                NavigationLink(destination: CambiarContrasen_a(),isActive: $iniciar, label: {EmptyView()})
+            }
+            Color.ui.colorWebControl
+                .ignoresSafeArea()
+            
+            VStack{
+                WCLogo(name: "logoWebControl",width: 230,height: 90)
+                WCText(titleType: .title("Nesecita ayuda con su contraseña?"))
+                WCText(titleType: .subtitle("Ingrese el Id que utiliza WebControl App y le ayudaremos a crear una nueva contraseña"))
+                TextFieldImageNot(text: "Id")
+                WCButton(name: "INGRESAR",backgroundColor: .black,textColor: .white)
+                WCButton(name: "VOLVER",textColor: .white)
+            }
+        }
     }
 }
 

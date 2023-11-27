@@ -7,18 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7313DF372B0F2DE500674C2B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7313DF362B0F2DE500674C2B /* Localizable.strings */; };
+		735BFF502B14F7F100BD202D /* WCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF4F2B14F7F100BD202D /* WCAlert.swift */; };
+		735BFF522B1533D500BD202D /* WCLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF512B1533D500BD202D /* WCLoader.swift */; };
+		735BFF542B154FE900BD202D /* WCToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF532B154FE900BD202D /* WCToast.swift */; };
 		73C1DFBD2B0E7046008D584C /* WebControlAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFBC2B0E7046008D584C /* WebControlAppApp.swift */; };
-		73C1DFBF2B0E7046008D584C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFBE2B0E7046008D584C /* ContentView.swift */; };
+		73C1DFBF2B0E7046008D584C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFBE2B0E7046008D584C /* Login.swift */; };
 		73C1DFC12B0E7048008D584C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C1DFC02B0E7048008D584C /* Assets.xcassets */; };
 		73C1DFC42B0E7048008D584C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C1DFC32B0E7048008D584C /* Preview Assets.xcassets */; };
+		73C1DFCC2B0EA084008D584C /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFCB2B0EA084008D584C /* Registro.swift */; };
+		73C1DFCE2B0EA215008D584C /* AyudaContraseña.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFCD2B0EA215008D584C /* AyudaContraseña.swift */; };
+		73C1DFD02B0EA26F008D584C /* CambiarContraseña.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFCF2B0EA26F008D584C /* CambiarContraseña.swift */; };
+		73C1DFD22B0EA294008D584C /* ValidarCodigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFD12B0EA294008D584C /* ValidarCodigo.swift */; };
+		73C1DFD42B0EA2B8008D584C /* ConfirmarNContraseña.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFD32B0EA2B8008D584C /* ConfirmarNContraseña.swift */; };
+		73E66A5E2B110FD000A06D93 /* HeaderBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A5D2B110FD000A06D93 /* HeaderBackground.swift */; };
+		73E66A602B11112D00A06D93 /* ColorBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A5F2B11112D00A06D93 /* ColorBackground.swift */; };
+		73E66A622B11143100A06D93 /* WCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A612B11143100A06D93 /* WCTextField.swift */; };
+		73E66A642B111A8800A06D93 /* WCLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A632B111A8800A06D93 /* WCLogo.swift */; };
+		73E66A662B111CF500A06D93 /* WCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A652B111CF500A06D93 /* WCButton.swift */; };
+		73E66A682B111E2200A06D93 /* WCImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A672B111E2200A06D93 /* WCImage.swift */; };
+		73E66A6A2B11494400A06D93 /* WCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A692B11494400A06D93 /* WCText.swift */; };
+		73E66A6D2B11675B00A06D93 /* Contantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A6C2B11675B00A06D93 /* Contantes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7313DF362B0F2DE500674C2B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		735BFF4F2B14F7F100BD202D /* WCAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAlert.swift; sourceTree = "<group>"; };
+		735BFF512B1533D500BD202D /* WCLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCLoader.swift; sourceTree = "<group>"; };
+		735BFF532B154FE900BD202D /* WCToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCToast.swift; sourceTree = "<group>"; };
 		73C1DFB92B0E7046008D584C /* WebControlApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebControlApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C1DFBC2B0E7046008D584C /* WebControlAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebControlAppApp.swift; sourceTree = "<group>"; };
-		73C1DFBE2B0E7046008D584C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		73C1DFBE2B0E7046008D584C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		73C1DFC02B0E7048008D584C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73C1DFC32B0E7048008D584C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		73C1DFCB2B0EA084008D584C /* Registro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro.swift; sourceTree = "<group>"; };
+		73C1DFCD2B0EA215008D584C /* AyudaContraseña.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AyudaContraseña.swift"; sourceTree = "<group>"; };
+		73C1DFCF2B0EA26F008D584C /* CambiarContraseña.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CambiarContraseña.swift"; sourceTree = "<group>"; };
+		73C1DFD12B0EA294008D584C /* ValidarCodigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidarCodigo.swift; sourceTree = "<group>"; };
+		73C1DFD32B0EA2B8008D584C /* ConfirmarNContraseña.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfirmarNContraseña.swift"; sourceTree = "<group>"; };
+		73E66A5D2B110FD000A06D93 /* HeaderBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBackground.swift; sourceTree = "<group>"; };
+		73E66A5F2B11112D00A06D93 /* ColorBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBackground.swift; sourceTree = "<group>"; };
+		73E66A612B11143100A06D93 /* WCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTextField.swift; sourceTree = "<group>"; };
+		73E66A632B111A8800A06D93 /* WCLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCLogo.swift; sourceTree = "<group>"; };
+		73E66A652B111CF500A06D93 /* WCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCButton.swift; sourceTree = "<group>"; };
+		73E66A672B111E2200A06D93 /* WCImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCImage.swift; sourceTree = "<group>"; };
+		73E66A692B11494400A06D93 /* WCText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCText.swift; sourceTree = "<group>"; };
+		73E66A6C2B11675B00A06D93 /* Contantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contantes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +85,15 @@
 		73C1DFBB2B0E7046008D584C /* WebControlApp */ = {
 			isa = PBXGroup;
 			children = (
+				73E66A6B2B11673400A06D93 /* Utils */,
+				73E66A5A2B110EE600A06D93 /* Atoms */,
+				73E66A5B2B110F0400A06D93 /* Molecules */,
+				73E66A5C2B110F1600A06D93 /* Organisms */,
+				73C1DFCA2B0E748A008D584C /* Views */,
 				73C1DFBC2B0E7046008D584C /* WebControlAppApp.swift */,
-				73C1DFBE2B0E7046008D584C /* ContentView.swift */,
 				73C1DFC02B0E7048008D584C /* Assets.xcassets */,
 				73C1DFC22B0E7048008D584C /* Preview Content */,
+				7313DF362B0F2DE500674C2B /* Localizable.strings */,
 			);
 			path = WebControlApp;
 			sourceTree = "<group>";
@@ -65,6 +104,58 @@
 				73C1DFC32B0E7048008D584C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		73C1DFCA2B0E748A008D584C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73C1DFBE2B0E7046008D584C /* Login.swift */,
+				73C1DFCB2B0EA084008D584C /* Registro.swift */,
+				73C1DFCD2B0EA215008D584C /* AyudaContraseña.swift */,
+				73C1DFCF2B0EA26F008D584C /* CambiarContraseña.swift */,
+				73C1DFD12B0EA294008D584C /* ValidarCodigo.swift */,
+				73C1DFD32B0EA2B8008D584C /* ConfirmarNContraseña.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73E66A5A2B110EE600A06D93 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				73E66A5D2B110FD000A06D93 /* HeaderBackground.swift */,
+				73E66A5F2B11112D00A06D93 /* ColorBackground.swift */,
+				73E66A632B111A8800A06D93 /* WCLogo.swift */,
+				73E66A652B111CF500A06D93 /* WCButton.swift */,
+				73E66A672B111E2200A06D93 /* WCImage.swift */,
+				73E66A692B11494400A06D93 /* WCText.swift */,
+				735BFF512B1533D500BD202D /* WCLoader.swift */,
+				735BFF532B154FE900BD202D /* WCToast.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		73E66A5B2B110F0400A06D93 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				73E66A612B11143100A06D93 /* WCTextField.swift */,
+				735BFF4F2B14F7F100BD202D /* WCAlert.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		73E66A5C2B110F1600A06D93 /* Organisms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Organisms;
+			sourceTree = "<group>";
+		};
+		73E66A6B2B11673400A06D93 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				73E66A6C2B11675B00A06D93 /* Contantes.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73C1DFC42B0E7048008D584C /* Preview Assets.xcassets in Resources */,
+				7313DF372B0F2DE500674C2B /* Localizable.strings in Resources */,
 				73C1DFC12B0E7048008D584C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +229,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73C1DFBF2B0E7046008D584C /* ContentView.swift in Sources */,
+				73C1DFBF2B0E7046008D584C /* Login.swift in Sources */,
+				73C1DFD42B0EA2B8008D584C /* ConfirmarNContraseña.swift in Sources */,
 				73C1DFBD2B0E7046008D584C /* WebControlAppApp.swift in Sources */,
+				735BFF542B154FE900BD202D /* WCToast.swift in Sources */,
+				73E66A622B11143100A06D93 /* WCTextField.swift in Sources */,
+				73E66A642B111A8800A06D93 /* WCLogo.swift in Sources */,
+				73E66A5E2B110FD000A06D93 /* HeaderBackground.swift in Sources */,
+				73E66A682B111E2200A06D93 /* WCImage.swift in Sources */,
+				73C1DFD22B0EA294008D584C /* ValidarCodigo.swift in Sources */,
+				73E66A662B111CF500A06D93 /* WCButton.swift in Sources */,
+				73C1DFCE2B0EA215008D584C /* AyudaContraseña.swift in Sources */,
+				735BFF502B14F7F100BD202D /* WCAlert.swift in Sources */,
+				73C1DFCC2B0EA084008D584C /* Registro.swift in Sources */,
+				73E66A602B11112D00A06D93 /* ColorBackground.swift in Sources */,
+				73E66A6D2B11675B00A06D93 /* Contantes.swift in Sources */,
+				735BFF522B1533D500BD202D /* WCLoader.swift in Sources */,
+				73E66A6A2B11494400A06D93 /* WCText.swift in Sources */,
+				73C1DFD02B0EA26F008D584C /* CambiarContraseña.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
