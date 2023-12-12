@@ -27,12 +27,15 @@ struct WCToast: View {
                 Spacer()
                 if showToast{
                     Text(text)
-//                        .frame(width: 200,height: 200)
-                        .background(Color.ui.colorWebControl)
-                        .cornerRadius(10)
                         .foregroundColor(.white)
-                        .transition(.move(edge: .bottom))
+                        .transition(.move(edge: .trailing))
+                        .frame(width: 300,height: 50)
+                        .background(.red)
+                        .cornerRadius(5)
+                        .padding(50)
+                        
                 }
+                
             }
         }
         .onChange(of: showToast) { newValue in
@@ -44,11 +47,13 @@ struct WCToast: View {
                 }
             }
         }
+        
     }
 }
 
 struct WCToast_Previews: PreviewProvider {
     static var previews: some View {
-        WCToast(text: "WebControl")
+        WCToast(text: "Exito")
+            
     }
 }

@@ -1,0 +1,12 @@
+{
+  "source": "/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Views/Registro.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Bandera"
+      }
+    ]
+  },
+  "version": 1
+}

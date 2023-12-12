@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WCButton: View {
     
-    @State private var iniciar: Bool = false
+    var action: () -> Void
     var name: String?
     var backgroundColor: Color?
     var cornerRadius: CGFloat?
@@ -20,7 +20,7 @@ struct WCButton: View {
     var body: some View {
         VStack{
             Button(action: {
-                iniciar = true
+                action()
             }, label: {
                 Text(name ?? "")
                     .frame(width: width ?? 320,height: height ?? 50)
@@ -36,7 +36,7 @@ struct WCButton: View {
 
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
-        WCButton(name: "INGRESAR", backgroundColor: Color.ui.colorWebControl, cornerRadius: 50, textColor: .white,width: 320,height: 55)
+        WCButton(action: { }, name: "INGRESAR", backgroundColor: Color.ui.colorWebControl, cornerRadius: 50, textColor: .white,width: 320,height: 55)
         
     }
 }

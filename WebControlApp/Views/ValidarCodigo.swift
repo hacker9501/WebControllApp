@@ -6,11 +6,9 @@
 //
 
 import SwiftUI
-
+@available(iOS 16.0, *)
 struct ValidarCodigo: View {
     
-    @State private var id: String = ""
-    @State private var contraseña: String = ""
     @State private var codigo: String = ""
     @State private var iniciar: Bool = false
     
@@ -23,12 +21,25 @@ struct ValidarCodigo: View {
                 .ignoresSafeArea()
             VStack{
                 WCLogo(name: "logoWebControl",width: 230,height: 90).padding(.bottom,40)
-                WCText(titleType: .title("Cambio de contraseña"))
-                WCText(titleType: .subtitle("Hemos enviado un código de verificación al numero ingreselo en el siguiente recuadro"))
-                TextFieldImageNot(text: "Ingrese el codigo de verificación")
+                WCText(titleType: .title("Cambio de contraseña"),color: .white)
+                WCText(titleType: .subtitle("Hemos enviado un código de verificación al numero ingreselo en el siguiente recuadro"),color: .white)
+                TextFieldImageNot(TxtFieldType: .named("Ingrese el codigo de verificación"), bindingVar: $codigo)
+                    .keyboardType(.alphabet)
+                    .onChange(of: codigo) { newValue in
+                        if contieneCaracteresEspeciales(newValue) {
+                            codigo = String(newValue.filter { $0.isLetter || $0.isNumber })
+                        }
+                    }
                 HStack{ 
-                    WCButton(name: "REENVIAR",backgroundColor: .black,textColor: .white, width: 150)
-                    WCButton(name: "VALIDAR",backgroundColor: .black,textColor: .white,width: 150)
+                    WCButton(action: {}, name: "REENVIAR",backgroundColor: .black,textColor: .white, width: 150)
+                    WCButton(action: {
+                        if codigo.isEmpty{
+                            
+                        }else{
+                            iniciar = true
+                        }
+                        
+                    }, name: "VALIDAR",backgroundColor: .black,textColor: .white,width: 150)
                 }
                 
             }
@@ -38,6 +49,10 @@ struct ValidarCodigo: View {
 
 struct ValidarCodigo_Previews: PreviewProvider {
     static var previews: some View {
-        ValidarCodigo()
+        if #available(iOS 16.0, *) {
+            ValidarCodigo()
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }

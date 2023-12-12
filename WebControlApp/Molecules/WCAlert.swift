@@ -9,26 +9,29 @@ import SwiftUI
 
 struct WCAlert: View {
     
-    @State var isPresent: Bool = true
+    @Binding var isPresent: Bool
     var title:String
     var message:String
     var pButton:String
     var sbutton:String
     
     var body: some View {
-        VStack{
+        ZStack{
             
-        }.alert(isPresented: $isPresent, content: {
-            Alert(title: Text(title),
-                  message: Text(message),
-                  primaryButton: .default(Text(pButton)), secondaryButton: .destructive(Text(sbutton)))
-            
-        })
+            VStack{
+                
+            }.alert(isPresented: $isPresent, content: {
+                Alert(title: Text(title),
+                      message: Text(message),
+                      primaryButton: .default(Text(pButton)), secondaryButton: .destructive(Text(sbutton)))
+                
+            })
+        }
     }
 }
 
 struct WCAlert_Previews: PreviewProvider {
     static var previews: some View {
-        WCAlert(title: "Hola", message: "Bienvenido", pButton: "Aceptar", sbutton: "Cancelar")
+        WCAlert(isPresent: .constant(false), title: "Hola", message: "Bienvenido", pButton: "Aceptar", sbutton: "Cancelar")
     }
 }

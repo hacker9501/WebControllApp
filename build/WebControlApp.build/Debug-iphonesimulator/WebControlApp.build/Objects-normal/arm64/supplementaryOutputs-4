@@ -1,0 +1,15 @@
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Atoms/WCButton.swift":
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCButton.dia"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCButton.d"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCButton.o"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCButton.swiftdeps"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Views/AyudaContrasen\u0303a.swift":
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/AyudaContrasen\u0303a.o"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/AyudaContrasen\u0303a.d"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/AyudaContrasen\u0303a.swiftdeps"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/AyudaContrasen\u0303a.dia"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Views/ValidarCodigo.swift":
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ValidarCodigo.dia"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ValidarCodigo.o"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ValidarCodigo.d"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ValidarCodigo.swiftdeps"

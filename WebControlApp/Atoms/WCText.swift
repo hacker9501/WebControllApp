@@ -16,6 +16,7 @@ struct WCText: View {
     var titleType: TitleType
     var width: CGFloat?
     var height: CGFloat?
+    var color: Color?
     
     var body: some View {
         VStack{
@@ -26,12 +27,12 @@ struct WCText: View {
                     .bold()
                     .multilineTextAlignment(.center)
                     .padding(.bottom)
-                    .foregroundColor(.white)
+                    .foregroundColor(color)
             case .subtitle(let subtitle):
                 Text(subtitle)
                     .frame(width: 370)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
+                    .foregroundColor(color)
                     .padding()
             }
         }

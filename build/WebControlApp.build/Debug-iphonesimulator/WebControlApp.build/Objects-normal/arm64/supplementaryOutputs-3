@@ -1,0 +1,15 @@
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Atoms/HeaderBackground.swift":
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/HeaderBackground.swiftdeps"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/HeaderBackground.d"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/HeaderBackground.dia"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/HeaderBackground.o"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Atoms/WCImage.swift":
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCImage.swiftdeps"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCImage.d"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCImage.dia"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCImage.o"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Atoms/WCLogo.swift":
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCLogo.d"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCLogo.dia"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCLogo.o"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCLogo.swiftdeps"

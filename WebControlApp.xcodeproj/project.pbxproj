@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7313DF372B0F2DE500674C2B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7313DF362B0F2DE500674C2B /* Localizable.strings */; };
+		732499D52B16927C00B6D412 /* WCPageSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732499D42B16927C00B6D412 /* WCPageSheet.swift */; };
 		735BFF502B14F7F100BD202D /* WCAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF4F2B14F7F100BD202D /* WCAlert.swift */; };
 		735BFF522B1533D500BD202D /* WCLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF512B1533D500BD202D /* WCLoader.swift */; };
 		735BFF542B154FE900BD202D /* WCToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF532B154FE900BD202D /* WCToast.swift */; };
+		735BFF562B15A7E400BD202D /* WCCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BFF552B15A7E400BD202D /* WCCardView.swift */; };
 		73C1DFBD2B0E7046008D584C /* WebControlAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFBC2B0E7046008D584C /* WebControlAppApp.swift */; };
 		73C1DFBF2B0E7046008D584C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1DFBE2B0E7046008D584C /* Login.swift */; };
 		73C1DFC12B0E7048008D584C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C1DFC02B0E7048008D584C /* Assets.xcassets */; };
@@ -28,13 +30,17 @@
 		73E66A682B111E2200A06D93 /* WCImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A672B111E2200A06D93 /* WCImage.swift */; };
 		73E66A6A2B11494400A06D93 /* WCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A692B11494400A06D93 /* WCText.swift */; };
 		73E66A6D2B11675B00A06D93 /* Contantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A6C2B11675B00A06D93 /* Contantes.swift */; };
+		73F4DFB82B27B3F000833896 /* WCModificadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F4DFB72B27B3F000833896 /* WCModificadores.swift */; };
+		73F4DFBA2B27CD2400833896 /* WCValidarCampos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F4DFB92B27CD2400833896 /* WCValidarCampos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7313DF362B0F2DE500674C2B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		732499D42B16927C00B6D412 /* WCPageSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCPageSheet.swift; sourceTree = "<group>"; };
 		735BFF4F2B14F7F100BD202D /* WCAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCAlert.swift; sourceTree = "<group>"; };
 		735BFF512B1533D500BD202D /* WCLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCLoader.swift; sourceTree = "<group>"; };
 		735BFF532B154FE900BD202D /* WCToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCToast.swift; sourceTree = "<group>"; };
+		735BFF552B15A7E400BD202D /* WCCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCCardView.swift; sourceTree = "<group>"; };
 		73C1DFB92B0E7046008D584C /* WebControlApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebControlApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C1DFBC2B0E7046008D584C /* WebControlAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebControlAppApp.swift; sourceTree = "<group>"; };
 		73C1DFBE2B0E7046008D584C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 		73E66A672B111E2200A06D93 /* WCImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCImage.swift; sourceTree = "<group>"; };
 		73E66A692B11494400A06D93 /* WCText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCText.swift; sourceTree = "<group>"; };
 		73E66A6C2B11675B00A06D93 /* Contantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contantes.swift; sourceTree = "<group>"; };
+		73F4DFB72B27B3F000833896 /* WCModificadores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCModificadores.swift; sourceTree = "<group>"; };
+		73F4DFB92B27CD2400833896 /* WCValidarCampos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCValidarCampos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 			children = (
 				73E66A612B11143100A06D93 /* WCTextField.swift */,
 				735BFF4F2B14F7F100BD202D /* WCAlert.swift */,
+				732499D42B16927C00B6D412 /* WCPageSheet.swift */,
 			);
 			path = Molecules;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 		73E66A5C2B110F1600A06D93 /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
+				735BFF552B15A7E400BD202D /* WCCardView.swift */,
 			);
 			path = Organisms;
 			sourceTree = "<group>";
@@ -154,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				73E66A6C2B11675B00A06D93 /* Contantes.swift */,
+				73F4DFB72B27B3F000833896 /* WCModificadores.swift */,
+				73F4DFB92B27CD2400833896 /* WCValidarCampos.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -232,14 +244,18 @@
 				73C1DFBF2B0E7046008D584C /* Login.swift in Sources */,
 				73C1DFD42B0EA2B8008D584C /* ConfirmarNContraseña.swift in Sources */,
 				73C1DFBD2B0E7046008D584C /* WebControlAppApp.swift in Sources */,
+				735BFF562B15A7E400BD202D /* WCCardView.swift in Sources */,
 				735BFF542B154FE900BD202D /* WCToast.swift in Sources */,
 				73E66A622B11143100A06D93 /* WCTextField.swift in Sources */,
+				73F4DFBA2B27CD2400833896 /* WCValidarCampos.swift in Sources */,
 				73E66A642B111A8800A06D93 /* WCLogo.swift in Sources */,
 				73E66A5E2B110FD000A06D93 /* HeaderBackground.swift in Sources */,
 				73E66A682B111E2200A06D93 /* WCImage.swift in Sources */,
 				73C1DFD22B0EA294008D584C /* ValidarCodigo.swift in Sources */,
 				73E66A662B111CF500A06D93 /* WCButton.swift in Sources */,
 				73C1DFCE2B0EA215008D584C /* AyudaContraseña.swift in Sources */,
+				73F4DFB82B27B3F000833896 /* WCModificadores.swift in Sources */,
+				732499D52B16927C00B6D412 /* WCPageSheet.swift in Sources */,
 				735BFF502B14F7F100BD202D /* WCAlert.swift in Sources */,
 				73C1DFCC2B0EA084008D584C /* Registro.swift in Sources */,
 				73E66A602B11112D00A06D93 /* ColorBackground.swift in Sources */,
@@ -382,6 +398,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,6 +427,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,6 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "holahacker01-gmail.com.WebControlApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

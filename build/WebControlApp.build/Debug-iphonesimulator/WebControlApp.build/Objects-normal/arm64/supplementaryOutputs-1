@@ -1,0 +1,15 @@
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Views/ConfirmarNContrasen\u0303a.swift":
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ConfirmarNContrasen\u0303a.d"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ConfirmarNContrasen\u0303a.swiftdeps"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ConfirmarNContrasen\u0303a.o"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/ConfirmarNContrasen\u0303a.dia"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Views/Login.swift":
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/Login.swiftdeps"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/Login.o"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/Login.d"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/Login.dia"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/WebControlAppApp.swift":
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WebControlAppApp.dia"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WebControlAppApp.swiftdeps"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WebControlAppApp.d"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WebControlAppApp.o"

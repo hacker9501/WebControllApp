@@ -1,0 +1,15 @@
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Molecules/WCTextField.swift":
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCTextField.o"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCTextField.d"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCTextField.swiftdeps"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCTextField.dia"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Organisms/WCCardView.swift":
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCCardView.d"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCCardView.o"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCCardView.swiftdeps"
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCCardView.dia"
+"/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Atoms/WCToast.swift":
+  diagnostics: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCToast.dia"
+  object: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCToast.o"
+  swift-dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCToast.swiftdeps"
+  dependencies: "/Users/elvermaytahernandez/Projects/WebControlApp/build/WebControlApp.build/Debug-iphonesimulator/WebControlApp.build/Objects-normal/arm64/WCToast.d"

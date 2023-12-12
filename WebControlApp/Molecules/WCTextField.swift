@@ -6,109 +6,179 @@
 //
 
 import SwiftUI
+import Combine
 
-struct WCTextField: View {
-    
-    var image: String?
-    var text: String
-    @State private var password: String = ""
-    
-    var body: some View {
-        HStack{
-            Image(systemName: image ?? "")
-                .foregroundColor(.gray)
-                .padding(.leading, 8)
-            SecureField(text, text: $password)
-        }.padding()
-            .background(Color.white)
-            .cornerRadius(50)
-            .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 2))
-            .frame(width: 320,height: 40)
-            .padding(.bottom)
-        
-        
-    }
-}
-
-struct TextField_Previews: PreviewProvider {
-    static var previews: some View {
-        WCTextField(image: "lock", text: "Contraseña")
-    }
-}
-
-struct WCTextFieldText: View {
-    
+struct WCTextFieldCampo: View {
     var image: String?
     var width: CGFloat?
     var height: CGFloat?
     var text: String
     @State private var password: String = ""
+    var bindingVar: Binding<String>
+    @State private var validacion: Bool = false
     
     var body: some View {
         HStack{
             Image(systemName: image ?? "")
                 .foregroundColor(.gray)
                 .padding(.leading, 8)
-            TextField(text, text: $password)
+            
+            TextField(text, text: bindingVar)
         }.padding()
             .background(Color.white)
             .cornerRadius(50)
-            .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 2))
+            .overlay(RoundedRectangle(cornerRadius: 50).stroke(validacion ? Color.blue : Color.red , lineWidth: 1))
             .frame(width: width ?? 320,height: height ?? 40)
             .padding(.bottom)
     }
 }
 
-struct TextFieldImageNot: View {
+struct WCTextField: View {
+    var image: String?
     var text: String
+    @State private var password: String = ""
+    @Binding var bindingVar: String
+    //@Binding var value :String
+    @State private var showPassword: Bool = true
+    
+    var body: some View {
+        HStack{
+            Image(systemName: image ?? "")
+                .foregroundColor(.gray)
+                .padding(.leading, 8)
+            if showPassword{
+                SecureField(text, text: $bindingVar)
+            }else{
+                TextField(text, text: $bindingVar)
+                    .frame(height: 20)
+            }
+        }.padding()
+            .background(Color.white)
+            .cornerRadius(50)
+            .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
+            .frame(width: 320,height: 40)
+            .padding(.bottom)
+            .overlay(alignment:.trailing){
+                    Image(systemName: showPassword ? "eye.slash" : "eye")
+                    .onTapGesture {
+                        showPassword.toggle()
+                    }
+                    .foregroundColor(.gray)
+                            .padding()
+                            .padding(.top,-17)
+                            //.contentShape()
+                }
+            }
+}
+
+
+
+/*struct TextField_Previews: PreviewProvider {
+    static var previews: some View {
+        WCTextField(image: "lock", text: "Contraseña", bindingVar: $password)
+    }
+}*/
+
+struct WCTextFieldText: View {
+    let limitId = 15
+    var image: String?
+    var width: CGFloat?
+    var height: CGFloat?
+    var text: String
+    var bindingVar: Binding<String>
+    
+    var body: some View {
+        HStack{
+            Image(systemName: image ?? "")
+                .foregroundColor(.gray)
+                .padding(.leading, 8)
+            TextField(text, text: bindingVar)
+        }.padding()
+            .background(Color.white)
+            .cornerRadius(50)
+            .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
+            .frame(width: width ?? 320,height: height ?? 40)
+            .padding(.bottom)
+    }
+}
+
+
+
+func contieneCaracteresEspeciales(_ texto: String) -> Bool {
+    let caracteresEspeciales = CharacterSet.alphanumerics.inverted
+    return texto.rangeOfCharacter(from: caracteresEspeciales) != nil
+}
+
+
+struct TextFieldImageNot: View {
+    
+    enum TextFieldType {
+        case password(String)
+        case named(String)
+    }
+    
+    var TxtFieldType: TextFieldType
+    
+    var text: String?
+    var bindingVar: Binding<String>
     @State private var confirmar: String = ""
     
     var body: some View {
         VStack{
-            SecureField(text, text: $confirmar)
-                .padding()
-                .background(Color.white)
-                .cornerRadius(50)
-                .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 2))
-                .padding()
+            switch TxtFieldType {
+            case .password(let text):
+                SecureField(text, text: bindingVar)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(50)
+                    .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
+                    .padding()
+            case .named(let text):
+                TextField(text, text: bindingVar)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(50)
+                    .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
+                    .padding()
+                
+            }
         }
     }
-}
-
-struct FloatingTitleTextField: View {
-    
-    let placeholder: String
-    @Binding var text: String
-    
-    var body: some View {
-        TextField("", text: $text)
-            .foregroundColor(.gray)
-            .font(.system(size: 20))
-            .padding(EdgeInsets(top: 20, leading: 65, bottom: 30, trailing: 50))
-            .background
-        {
-            Image(systemName: "person.text.rectangle")
+    struct FloatingTitleTextField: View {
+        
+        let placeholder: String
+        @Binding var text: String
+        
+        var body: some View {
+            TextField("", text: $text)
                 .foregroundColor(.gray)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 240))
-            Spacer()
-            ZStack {
-                RoundedRectangle(cornerRadius: 50)
-                    .stroke(.black, lineWidth: 0)
-                    .padding()
-                    .background(Color.white.opacity(0.2))
-                    .cornerRadius(50)
-                    .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 2))
-                    .frame(width: 300,height: 53)
-                    .padding(.bottom)
-                Text(placeholder)
+                .font(.system(size: 20))
+                .padding(EdgeInsets(top: 20, leading: 65, bottom: 30, trailing: 50))
+                .background
+            {
+                Image(systemName: "person.text.rectangle")
                     .foregroundColor(.gray)
-                    .padding(2)
-                    .background()
-                    .frame(maxWidth: .infinity,
-                           maxHeight: .infinity,
-                           alignment: .topLeading)
-                
-                    .offset(x: 20, y: -10)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 240))
+                Spacer()
+                ZStack {
+                    RoundedRectangle(cornerRadius: 50)
+                        .stroke(.black, lineWidth: 0)
+                        .padding()
+                        .background(Color.white.opacity(0.2))
+                        .cornerRadius(50)
+                        .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
+                        .frame(width: 300,height: 53)
+                        .padding(.bottom)
+                    Text(placeholder)
+                        .foregroundColor(.gray)
+                        .padding(2)
+                        .background()
+                        .frame(maxWidth: .infinity,
+                               maxHeight: .infinity,
+                               alignment: .topLeading)
+                    
+                        .offset(x: 20, y: -10)
+                }
             }
         }
     }

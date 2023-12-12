@@ -1,0 +1,16 @@
+{
+  "source": "/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Molecules/WCPageSheet.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Tap Me!"
+      },
+      {
+        "comment": "",
+        "key": "Select"
+      }
+    ]
+  },
+  "version": 1
+}

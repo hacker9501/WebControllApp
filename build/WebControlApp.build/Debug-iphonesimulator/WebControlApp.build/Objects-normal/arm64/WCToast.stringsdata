@@ -1,0 +1,12 @@
+{
+  "source": "/Users/elvermaytahernandez/Projects/WebControlApp/WebControlApp/Atoms/WCToast.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Toast"
+      }
+    ]
+  },
+  "version": 1
+}
