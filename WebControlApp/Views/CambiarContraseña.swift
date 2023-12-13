@@ -23,11 +23,19 @@ struct CambiarContrasen_a: View {
             }
             Color.ui.colorWebControl
                 .ignoresSafeArea()
-            
-            VStack{
+            ZStack(alignment: .top){
+                VStack{
+                    headerBackgroud
+                    Spacer()
+                }
                 WCLogo(name: "logoWebControl",width: 230,height: 90)
+                
+            }
+            VStack{
                 WCText(titleType: .title("Cambiar contraseña"),color: .white)
-                WCText(titleType: .subtitle("Hemos enviado un código de verificación a su numero celular y correo registrado, ingrese a continuación su nueva contraseña y su código de verificación"),color: .white)
+                WCText(titleType: .subtitle("""
+                                            Hemos enviado un código de verificación a su numero celular y correo registrado, ingrese a continuación su nueva contraseña y su código de verificación
+                                            """),color: .white)
                 TextFieldImageNot(TxtFieldType: .named("ID"), bindingVar: $id)
                     .keyboardType(.alphabet)
                     .onReceive(Just(id)) { _ in limitText(limitId) }

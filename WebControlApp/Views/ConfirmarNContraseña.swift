@@ -22,11 +22,16 @@ struct ConfirmarNContrasen_a: View {
             
             Color.ui.colorWebControl
                 .ignoresSafeArea()
-            VStack{
+            ZStack{
                 WCLogo(name: "logoWebControl",width: 230,height: 90)
+                    .padding(.top,-250)
+            }
+            VStack{
                 WCText(titleType: .title("Cambio de contraseña"),color: .white)
+                    .padding(.top,50)
+                    .padding(.bottom,-10)
                 WCText(titleType: .subtitle("Establesca una nueva contraseña para su cuenta"),color: .white)
-                
+                    .padding(.bottom,-10)
                 TextFieldImageNot(TxtFieldType: .password("Contraseña Nueva"), text: "Contraseña Nueva", bindingVar: $contraseña)
                     .keyboardType(.alphabet)
                     .padding(.bottom,-20)

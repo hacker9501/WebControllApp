@@ -8,6 +8,32 @@
 import SwiftUI
 import Combine
 
+struct WCTextFieldTelefono: View {
+    var image: String?
+    var width: CGFloat?
+    var height: CGFloat?
+    var text: String
+    @State private var password: String = ""
+    var bindingVar: Binding<String>
+    var showError: Bool
+    
+    var body: some View {
+        HStack{
+            Image(systemName: image ?? "")
+                .foregroundColor(.gray)
+                .padding(.leading, 8)
+            
+            TextField(text, text: bindingVar)
+                .padding(.leading,60)
+        }.padding()
+            .background(Color.white)
+            .cornerRadius(50)
+            //.overlay(RoundedRectangle(cornerRadius: 50).stroke(showError ? Color.red : Color.blue , lineWidth: 1))
+            .frame(width: width ?? 320,height: height ?? 50)
+            //.padding(.bottom)
+    }
+}
+
 struct WCTextFieldCampo: View {
     var image: String?
     var width: CGFloat?
@@ -15,7 +41,7 @@ struct WCTextFieldCampo: View {
     var text: String
     @State private var password: String = ""
     var bindingVar: Binding<String>
-    @State private var validacion: Bool = false
+    var showError: Bool
     
     var body: some View {
         HStack{
@@ -27,9 +53,9 @@ struct WCTextFieldCampo: View {
         }.padding()
             .background(Color.white)
             .cornerRadius(50)
-            .overlay(RoundedRectangle(cornerRadius: 50).stroke(validacion ? Color.blue : Color.red , lineWidth: 1))
-            .frame(width: width ?? 320,height: height ?? 40)
-            .padding(.bottom)
+            //.overlay(RoundedRectangle(cornerRadius: 50).stroke(showError ? Color.red : Color.blue , lineWidth: 1))
+            .frame(width: width ?? 320,height: height ?? 50)
+            //.padding(.bottom)
     }
 }
 
@@ -40,6 +66,7 @@ struct WCTextField: View {
     @Binding var bindingVar: String
     //@Binding var value :String
     @State private var showPassword: Bool = true
+    var showError: Bool
     
     var body: some View {
         HStack{
@@ -55,9 +82,9 @@ struct WCTextField: View {
         }.padding()
             .background(Color.white)
             .cornerRadius(50)
-            .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
-            .frame(width: 320,height: 40)
-            .padding(.bottom)
+            //.overlay(RoundedRectangle(cornerRadius: 50).stroke(showError ? Color.red : Color.blue, lineWidth: 1))
+            .frame(width: 320,height: 50)
+            //.padding(.bottom)
             .overlay(alignment:.trailing){
                     Image(systemName: showPassword ? "eye.slash" : "eye")
                     .onTapGesture {
@@ -65,7 +92,7 @@ struct WCTextField: View {
                     }
                     .foregroundColor(.gray)
                             .padding()
-                            .padding(.top,-17)
+                            .padding(.top,0)
                             //.contentShape()
                 }
             }
@@ -86,6 +113,7 @@ struct WCTextFieldText: View {
     var height: CGFloat?
     var text: String
     var bindingVar: Binding<String>
+    var showError: Bool
     
     var body: some View {
         HStack{
@@ -96,9 +124,9 @@ struct WCTextFieldText: View {
         }.padding()
             .background(Color.white)
             .cornerRadius(50)
-            .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
-            .frame(width: width ?? 320,height: height ?? 40)
-            .padding(.bottom)
+            //.overlay(RoundedRectangle(cornerRadius: 50).stroke(showError ? Color.red : Color.blue, lineWidth: 1))
+            .frame(width: width ?? 320,height: height ?? 50)
+            //.padding(.bottom)
     }
 }
 

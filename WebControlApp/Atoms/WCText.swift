@@ -42,5 +42,6 @@ struct WCText: View {
 struct CustonText_Previews: PreviewProvider {
     static var previews: some View {
         WCText(titleType: .title("Cambio de contraseña"))
+        WCText(titleType: .subtitle("Cambio de contraseña Cambio de contraseña Cambio de contraseña Cambio de contraseña"))
     }
 }

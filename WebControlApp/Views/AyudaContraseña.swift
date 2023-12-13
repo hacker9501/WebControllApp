@@ -17,9 +17,9 @@ struct AyudaContrasen_a: View {
     @State private var isPresent = false
     @Environment(\.presentationMode) var presentationMode
     
-//    private var alert: WCAlert {
-//        return WCAlert(title: "Campo Vacío", message: "Por favor, ingresa tu ID.", pButton: "Entendido", sbutton: "")
-//    }
+    //    private var alert: WCAlert {
+    //        return WCAlert(title: "Campo Vacío", message: "Por favor, ingresa tu ID.", pButton: "Entendido", sbutton: "")
+    //    }
     
     
     var body: some View {
@@ -29,36 +29,45 @@ struct AyudaContrasen_a: View {
             }
             Color.ui.colorWebControl
                 .ignoresSafeArea()
-            
-            VStack{
+            ZStack(alignment: .top){
+                VStack{
+                    headerBackgroud
+                    Spacer()
+                }
                 WCLogo(name: "logoWebControl",width: 230,height: 90)
-                WCText(titleType: .title("Nesecita ayuda con su contraseña?"),color: .white)
-                WCText(titleType: .subtitle("Ingrese el Id que utiliza WebControl App y le ayudaremos a crear una nueva contraseña"),color: .white)
-                TextFieldImageNot(TxtFieldType: .named("ID"), text:"", bindingVar: $id)
-                    .keyboardType(.alphabet)
-                    .onReceive(Just(id)) { _ in limitText(limitId) }
+                
+            }
+            VStack{
+                    WCText(titleType: .title("Necesita ayuda con su contraseña?"),color: .white)
+                    .padding(.top,80)
+                    WCText(titleType: .subtitle("Ingrese el Id que utiliza WebControl App y le ayudaremos a crear una nueva contraseña"),color: .white)
+                    TextFieldImageNot(TxtFieldType: .named("ID"), text:"", bindingVar: $id)
+                        .keyboardType(.alphabet)
+                        .onReceive(Just(id)) { _ in limitText(limitId) }
+                        .onChange(of: id) { newValue in
+                            if contieneCaracteresEspeciales(newValue) {
+                                id = String(newValue.filter { $0.isLetter || $0.isNumber })
+                            }
+                        }
+                    WCButton(action: {
+                        if id.isEmpty{
+                            //                        WCAlert(title: "Hola", message: "Como estas", pButton: "1", sbutton: "2")
+                        }else{
+                            iniciar = true
+                        }
+                    }, name: "INGRESAR",backgroundColor: .black,textColor: .white)
                     .onChange(of: id) { newValue in
                         if contieneCaracteresEspeciales(newValue) {
                             id = String(newValue.filter { $0.isLetter || $0.isNumber })
                         }
                     }
-                WCButton(action: {
-                    if id.isEmpty{
-//                        WCAlert(title: "Hola", message: "Como estas", pButton: "1", sbutton: "2")
-                    }else{
-                        iniciar = true
-                    }
-                }, name: "INGRESAR",backgroundColor: .black,textColor: .white)
-                .onChange(of: id) { newValue in
-                    if contieneCaracteresEspeciales(newValue) {
-                        id = String(newValue.filter { $0.isLetter || $0.isNumber })
-                    }
-                }
-                WCButton(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }, name: "VOLVER",textColor: .white)
-                
+                    WCButton(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, name: "VOLVER",textColor: .white)
+                    
             }
+            
+            
         }
     }
     func  limitText(_ upper: Int) {

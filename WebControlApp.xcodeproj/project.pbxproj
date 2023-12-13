@@ -31,7 +31,6 @@
 		73E66A6A2B11494400A06D93 /* WCText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A692B11494400A06D93 /* WCText.swift */; };
 		73E66A6D2B11675B00A06D93 /* Contantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E66A6C2B11675B00A06D93 /* Contantes.swift */; };
 		73F4DFB82B27B3F000833896 /* WCModificadores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F4DFB72B27B3F000833896 /* WCModificadores.swift */; };
-		73F4DFBA2B27CD2400833896 /* WCValidarCampos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F4DFB92B27CD2400833896 /* WCValidarCampos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +59,6 @@
 		73E66A692B11494400A06D93 /* WCText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCText.swift; sourceTree = "<group>"; };
 		73E66A6C2B11675B00A06D93 /* Contantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contantes.swift; sourceTree = "<group>"; };
 		73F4DFB72B27B3F000833896 /* WCModificadores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCModificadores.swift; sourceTree = "<group>"; };
-		73F4DFB92B27CD2400833896 /* WCValidarCampos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCValidarCampos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +163,6 @@
 			children = (
 				73E66A6C2B11675B00A06D93 /* Contantes.swift */,
 				73F4DFB72B27B3F000833896 /* WCModificadores.swift */,
-				73F4DFB92B27CD2400833896 /* WCValidarCampos.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -247,7 +244,6 @@
 				735BFF562B15A7E400BD202D /* WCCardView.swift in Sources */,
 				735BFF542B154FE900BD202D /* WCToast.swift in Sources */,
 				73E66A622B11143100A06D93 /* WCTextField.swift in Sources */,
-				73F4DFBA2B27CD2400833896 /* WCValidarCampos.swift in Sources */,
 				73E66A642B111A8800A06D93 /* WCLogo.swift in Sources */,
 				73E66A5E2B110FD000A06D93 /* HeaderBackground.swift in Sources */,
 				73E66A682B111E2200A06D93 /* WCImage.swift in Sources */,

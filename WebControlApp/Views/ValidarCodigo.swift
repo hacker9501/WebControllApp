@@ -19,9 +19,13 @@ struct ValidarCodigo: View {
             }
             Color.ui.colorWebControl
                 .ignoresSafeArea()
+            ZStack{
+                WCLogo(name: "logoWebControl",width: 230,height: 90)
+                    .padding(.top,-230)
+                
+            }
             VStack{
-                WCLogo(name: "logoWebControl",width: 230,height: 90).padding(.bottom,40)
-                WCText(titleType: .title("Cambio de contraseña"),color: .white)
+                WCText(titleType: .title("Cambio de contraseña"),color: .white).padding(.top,50)
                 WCText(titleType: .subtitle("Hemos enviado un código de verificación al numero ingreselo en el siguiente recuadro"),color: .white)
                 TextFieldImageNot(TxtFieldType: .named("Ingrese el codigo de verificación"), bindingVar: $codigo)
                     .keyboardType(.alphabet)
