@@ -10,6 +10,8 @@ import SwiftUI
 struct ValidarCodigo: View {
     
     @State private var codigo: String = ""
+    @State private var codigoMensaje = ""
+    @State private var codigoError: Bool = false
     @State private var iniciar: Bool = false
     
     var body: some View {
@@ -28,17 +30,26 @@ struct ValidarCodigo: View {
                 WCText(titleType: .title("Cambio de contraseña"),color: .white).padding(.top,50)
                 WCText(titleType: .subtitle("Hemos enviado un código de verificación al numero ingreselo en el siguiente recuadro"),color: .white)
                 TextFieldImageNot(TxtFieldType: .named("Ingrese el codigo de verificación"), bindingVar: $codigo)
-                    .keyboardType(.alphabet)
+                    .keyboardType(.numberPad)
                     .onChange(of: codigo) { newValue in
+                        if !codigo.isEmpty {
+                            codigoError = false
+                            codigoMensaje = ""
+                        }
                         if contieneCaracteresEspeciales(newValue) {
                             codigo = String(newValue.filter { $0.isLetter || $0.isNumber })
                         }
                     }
+                if !codigoMensaje.isEmpty {
+                     Text(codigoMensaje)
+                         .foregroundColor(.red)
+                         .padding(.top,-25)
+                }
                 HStack{ 
                     WCButton(action: {}, name: "REENVIAR",backgroundColor: .black,textColor: .white, width: 150)
                     WCButton(action: {
                         if codigo.isEmpty{
-                            
+                            validate()
                         }else{
                             iniciar = true
                         }
@@ -47,6 +58,12 @@ struct ValidarCodigo: View {
                 }
                 
             }
+        }
+    }
+    func validate(){
+        if codigo.isEmpty{
+            codigoError = true
+            codigoMensaje = "Ingrese el codigo que fue enviado a su correo"
         }
     }
 }

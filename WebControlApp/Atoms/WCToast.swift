@@ -11,6 +11,7 @@ struct WCToast: View {
     
     @State private var showToast = false
     var text:String
+    var backgroundColor: Color?
     
     var body: some View {
         ZStack{
@@ -30,8 +31,8 @@ struct WCToast: View {
                         .foregroundColor(.white)
                         .transition(.move(edge: .trailing))
                         .frame(width: 300,height: 50)
-                        .background(.red)
-                        .cornerRadius(5)
+                        .background(backgroundColor)
+                        .cornerRadius(50)
                         .padding(50)
                         
                 }
@@ -53,7 +54,7 @@ struct WCToast: View {
 
 struct WCToast_Previews: PreviewProvider {
     static var previews: some View {
-        WCToast(text: "Exito")
+        WCToast(text: "Exito",backgroundColor: .gray)
             
     }
 }

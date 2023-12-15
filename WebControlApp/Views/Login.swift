@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 @available(iOS 16.0, *)
+
 struct Login: View {
     
     let limitId = 15
@@ -46,6 +47,7 @@ struct Login: View {
                         Spacer()
                     }
                     WCLogo(name: "logoWebControl",width: 230,height: 90)
+                        .padding(.top,20)
                 }
                 VStack{
                     VStack{

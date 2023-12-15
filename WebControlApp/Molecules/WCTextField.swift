@@ -146,23 +146,42 @@ struct TextFieldImageNot: View {
     }
     
     var TxtFieldType: TextFieldType
-    
+    @State private var showPassword: Bool = true
     var text: String?
-    var bindingVar: Binding<String>
+    @Binding var bindingVar: String
     @State private var confirmar: String = ""
     
     var body: some View {
         VStack{
             switch TxtFieldType {
             case .password(let text):
-                SecureField(text, text: bindingVar)
-                    .padding()
+                HStack{
+                    if showPassword{
+                        SecureField(text, text: $bindingVar)
+                    }else{
+                        TextField(text, text: $bindingVar)
+                            .frame(height: 20)
+                    }
+                }.padding()
                     .background(Color.white)
                     .cornerRadius(50)
                     .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.blue, lineWidth: 1))
                     .padding()
+                    .overlay(alignment:.trailing){
+                        Image(systemName: showPassword ? "eye.slash" : "eye")
+                            .onTapGesture {
+                                showPassword.toggle()
+                            }
+                            .foregroundColor(.gray)
+                            .padding()
+                            .padding(.top,0)
+                            .padding(.trailing,10)
+                        //.contentShape()
+                    }
+                //SecureField(text, text: $bindingVar)
+                    
             case .named(let text):
-                TextField(text, text: bindingVar)
+                TextField(text, text: $bindingVar)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(50)

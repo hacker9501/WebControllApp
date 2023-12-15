@@ -14,8 +14,8 @@ struct Registro: View {
     @State private var selectedFlag = 0
     let limitId = 15
     @State private var idMensaje = ""
-    @State private var paswordMensaje = ""
-    @State private var pasword2Mensaje = ""
+    @State private var apellidosMensaje = ""
+    @State private var nombresMensaje = ""
     @State private var telefonoMensaje = ""
     @State private var emailMensaje = ""
     
@@ -23,15 +23,15 @@ struct Registro: View {
     @State private var id: String = ""
     @State private var registrar: Bool = false
     @State private var selectedImage: UIImage?
-    @State private var password: String = ""
-    @State private var password2: String = ""
+    @State private var apellidos: String = ""
+    @State private var nombres: String = ""
     @State private var telefono: String = ""
     @State private var email: String = ""
 //    @State private var validacionId: Bool = false
 //    @State private var ispresent: Bool = false
     @State private var idError: Bool = false
-    @State private var passwordError: Bool = false
-    @State private var password2Error: Bool = false
+    @State private var apellidosError: Bool = false
+    @State private var nombresError: Bool = false
     @State private var telefonoError: Bool = false
     @State private var emailError: Bool = false
     
@@ -47,7 +47,7 @@ struct Registro: View {
 //                    }
 //                }
                 Group{
-                    NavigationLink(destination: Login(),isActive: $registrar, label: {EmptyView()})
+                    NavigationLink(destination: ValidarCodigo(),isActive: $registrar, label: {EmptyView()})
                 }
                 VStack{
                     headerBackgroud
@@ -81,8 +81,49 @@ struct Registro: View {
                         if !idMensaje.isEmpty {
                             Text(idMensaje)
                                 .foregroundColor(.red)
-                                .padding(.top,-5)
+                                .padding(.top,-10)
                         }
+                        HStack {
+                            WCTextFieldText(image: "person", text: "Apellidos", bindingVar: $apellidos, showError: apellidosError)
+                                .keyboardType(.alphabet)
+                                .overlay(RoundedRectangle(cornerRadius: 50).stroke(apellidosError ? Color.red : Color.blue, lineWidth: 1))
+                                .onReceive(Just(apellidos)) { _ in limitText(limitId) }
+                                .onChange(of: apellidos) { newValue in
+                                    if !apellidos.isEmpty {
+                                        apellidosError = false
+                                        apellidosMensaje = ""
+                                    }
+                                    if contieneCaracteresEspeciales(newValue) {
+                                        apellidos = String(newValue.filter { $0.isLetter || $0.isNumber })
+                                    }
+                                }
+                        }
+                        if !apellidosMensaje.isEmpty {
+                            Text(apellidosMensaje)
+                                .foregroundColor(.red)
+                                .padding(.top,-10)
+                        }
+                        HStack {
+                            WCTextFieldText(image: "person", text: "Nombres", bindingVar: $nombres, showError: nombresError)
+                                .keyboardType(.alphabet)
+                                .overlay(RoundedRectangle(cornerRadius: 50).stroke(nombresError ? Color.red : Color.blue, lineWidth: 1))
+                                .onReceive(Just(nombres)) { _ in limitText(limitId) }
+                                .onChange(of: nombres) { newValue in
+                                    if !nombres.isEmpty {
+                                        nombresError = false
+                                        nombresMensaje = ""
+                                    }
+                                    if contieneCaracteresEspeciales(newValue) {
+                                        nombres = String(newValue.filter { $0.isLetter || $0.isNumber })
+                                    }
+                                }
+                        }
+                        if !nombresMensaje.isEmpty {
+                            Text(nombresMensaje)
+                                .foregroundColor(.red)
+                                .padding(.top,-10)
+                        }
+                        /*
                         HStack {
                             WCTextField(image: "lock",text: "Contraseña", bindingVar: $password, showError: passwordError)
                                 .keyboardType(.alphabet)
@@ -126,6 +167,7 @@ struct Registro: View {
                                 .foregroundColor(.red)
                                 .padding(.top,-5)
                         }
+                        */
                         HStack{
                             VStack{
                                 HStack{
@@ -157,7 +199,7 @@ struct Registro: View {
                                 if !telefonoMensaje.isEmpty {
                                     Text(telefonoMensaje)
                                         .foregroundColor(.red)
-                                        .padding(.top,-5)
+                                        .padding(.top,-10)
                                 }
                             }
                         }
@@ -177,7 +219,7 @@ struct Registro: View {
                                 if !emailMensaje.isEmpty {
                                     Text(emailMensaje)
                                         .foregroundColor(.red)
-                                        .padding(.top,-5)
+                                        .padding(.top,-10)
                                 }
                             }
                         }
@@ -185,19 +227,7 @@ struct Registro: View {
                         WCButton(action: {
                             validateFields()
                             if !idError && !emailError && !telefonoError {
-                                if password2.isEmpty || password2 != password{
-                                    if password == password2 {
-                                    conPasswordMensaje = ""
-                                    print("La contraseñas son iguales")
-                                    registrar = true
-                                } else {
-                                    conPasswordMensaje = "La contraseña no concide"
-                                    registrar = false
-                                }
-                                }else{
-                                    conPasswordMensaje = ""
-                                    registrar = true
-                                }
+                                registrar = true
                             }
                              else {
                                 registrar = false
@@ -206,7 +236,7 @@ struct Registro: View {
                         }, name: "REGISTRAR",backgroundColor: Color.ui.colorWebControl,textColor: .white)
                         .padding(.bottom)
                     }.padding(15)
-                    .frame(width: 360,height: 420)
+                    .frame(width: 360,height: 450)
                     
                 }
                 .background(.white)
@@ -225,17 +255,17 @@ struct Registro: View {
             return emailPredicate.evaluate(with: email)
         }
         
-        if id.isEmpty && email.isEmpty && telefono.isEmpty && password.isEmpty && password2.isEmpty{
+        if id.isEmpty && email.isEmpty && telefono.isEmpty && apellidos.isEmpty && nombres.isEmpty{
             
             idError = true
-            passwordError = true
-            password2Error = true
+            apellidosError = true
+            nombresError = true
             emailError = true
             telefonoError = true
             
             idMensaje = "Campo Requerido"
-            paswordMensaje = "Campo Requerido"
-            pasword2Mensaje = "Campo Requerido"
+            apellidosMensaje = "Campo Requerido"
+            nombresMensaje = "Campo Requerido"
             telefonoMensaje = "Campo Requerido"
             emailMensaje = "Campo Requerido"
             
@@ -256,27 +286,13 @@ struct Registro: View {
             emailMensaje = "Formato de correo electrónico no válido"
             print("Formato de correo electrónico no válido")
         }
-//        else if password2.isEmpty || password2 != password {
-//            if password == password2 {
-//                conPasswordMensaje = ""
-//                print("La contraseñas son iguales")
-//            } else {
-//                conPasswordMensaje = "La contraseña no concide"
-//            }
-//        }
         
     }
     
-    
-    
-//    private func camposEstanLlenos() -> Bool {
-//        return id.isEmpty || password.isEmpty || email.isEmpty || telefono.isEmpty || password.isEmpty
-//    }
-    
     private func limpiarCampos(){
         id = ""
-        password = ""
-        password2 = ""
+        apellidos = ""
+        nombres = ""
         email = ""
         telefono = ""
     }
